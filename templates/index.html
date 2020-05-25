@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<form role="form" class="form-inline" method="post">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon">db file</div>
+            <input type="text" class="form-control" id="dbfile" value="/job.db">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon">start</div>
+            <input class="form-control" type="text" value="1">
+        </div>
+        <div class="input-group">
+            <div class="input-group-addon">end</div>
+            <input class="form-control" type="text" value="-1">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon">source</div>
+            cjol <input type="checkbox" name="source" value="cjox">
+            51job <input type="checkbox" name="source" value="51job">
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" onclick="downloadCjol()" >downloadCjol</button>
+    <button type="button" class="btn btn-primary" onclick="downloadQcwy()" >downloadQcwy</button>
+    <button type="button" class="btn btn-success" onclick="downloadLagou()" >downloadLagou</button>
+    <button type="button" class="btn btn-primary" onclick="downloadCompany()" >downloadCompany</button>
+
+</form>
+
+<script>
+		
+		function downloadCjol(){
+			$.ajax({url:"/downloadCjol"}).done(function( resq ) {
+    			alert(resq);
+  			});
+		}
+		function downloadQcwy(){
+			$.ajax({url:"/downloadQcwy"}).done(function( resq ) {
+    			alert(resq);
+  			});
+		}
+		function downloadLagou(){
+			$.ajax({url:"/downloadLagou"}).done(function( resq ) {
+    			alert(resq);
+  			});
+		}
+		function downloadCompany(){
+			$.ajax({url:"/downloadCompany"}).done(function( resq ) {
+    			alert(resq);
+  			});
+		}
+
+
+</script>
+
+</body>
+</html>
