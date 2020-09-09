@@ -41,6 +41,7 @@
     <button type="button" class="btn btn-success" onclick="downloadCjol()" >downloadCjol</button>
     <button type="button" class="btn btn-primary" onclick="downloadQcwy()" >downloadQcwy</button>
     <button type="button" class="btn btn-success" onclick="downloadLagou()" >downloadLagou</button>
+    <button type="button" class="btn btn-success" onclick="downloadBoss()" >downloadBoss</button>
     <button type="button" class="btn btn-primary" onclick="downloadCompany()" >downloadCompany</button>
 
 </form>
@@ -62,6 +63,11 @@
     			alert(resq);
   			});
 		}
+		function downloadBoss(){
+			$.ajax({url:"/downloadBoss"}).done(function( resq ) {
+    			alert(resq);
+  			});
+		}
 		function downloadCompany(){
 			$.ajax({url:"/downloadCompany"}).done(function( resq ) {
     			alert(resq);
@@ -70,6 +76,71 @@
 
 
 </script>
+
+
+<li>
+    <div class="job-primary">
+        <div class="info-primary">
+            <div class="primary-wrapper">
+                <div class="primary-box" href="/job_detail/d4f71386d5f1aa0e0HF62N67FFY~.html"
+                     data-jid="d4f71386d5f1aa0e0HF62N67FFY~" data-itemid="73" data-lid="nlp-lVueNGK5Us.search.73"
+                     data-jobid="75033644" data-index="12" ka="search_list_73" target="_blank">
+                    <div class="job-title">
+                        <span class="job-name"><a href="/job_detail/d4f71386d5f1aa0e0HF62N67FFY~.html" title="Java"
+                                                  target="_blank" ka="search_list_jname_73"
+                                                  data-jid="d4f71386d5f1aa0e0HF62N67FFY~" data-itemid="73"
+                                                  data-lid="nlp-lVueNGK5Us.search.73" data-jobid="75033644"
+                                                  data-index="12">Java</a></span>
+                        <span class="job-area-wrapper">
+                                                        <span class="job-area">深圳</span>
+                                                    </span>
+                        <span class="job-pub-time"></span>
+                    </div>
+                    <div class="job-limit clearfix">
+                        <span class="red">20-40K</span>
+                        <p>3-5年<em class="vline"></em>本科</p>
+                        <div class="info-publis">
+                            <h3 class="name"><img class="icon-chat"
+                                                  src="https://z.zhipin.com/web/geek/resource/icon-chat-v2.png">肖先生<em
+                                        class="vline"></em>高级开发工程师</h3>
+                        </div>
+                        <button class="btn btn-startchat" href="javascript:;"
+                                data-url="/wapi/zpgeek/friend/add.json?jobId=d4f71386d5f1aa0e0HF62N67FFY~&amp;lid=nlp-lVueNGK5Us.search.73"
+                                redirect-url="/web/geek/chat?id=3c3fc9a448d1f4270XR-2t-5Flo~">
+                            <img class="icon-chat icon-chat-hover"
+                                 src="https://z.zhipin.com/web/geek/resource/icon-chat-hover-v2.png" alt="">
+                            <span>立即沟通</span>
+                        </button>
+                    </div>
+                    <div class="info-detail" style="top: 0px;"></div>
+                </div>
+            </div>
+            <div class="info-company">
+                <div class="company-text">
+                    <h3 class="name"><a href="/gongsi/5d627415a46b4a750nJ9.html" title="阿里巴巴集团招聘"
+                                        ka="search_list_company_73_custompage" target="_blank">阿里巴巴集团</a></h3>
+                    <p><a href="/i100020/" class="false-link" target="_blank"
+                          ka="search_list_company_industry_73_custompage" title="互联网行业招聘信息">互联网</a><em
+                                class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                </div>
+                <a href="/gongsi/5d627415a46b4a750nJ9.html" ka="search_list_company_73_custompage_logo" target="_blank"><img
+                            class="company-logo"
+                            src="https://img.bosszhipin.com/beijin/mcs/bar/20191211/cff98890aeac18b0f4dee3577d92d543be1bd4a3bd2a63f070bdbdada9aad826.jpg?x-oss-process=image/resize,w_100,limit_0"
+                            alt=""></a>
+            </div>
+        </div>
+        <div class="info-append clearfix">
+            <div class="tags">
+                <span class="tag-item">Dubbo</span>
+                <span class="tag-item">Spring</span>
+                <span class="tag-item">SQL</span>
+                <span class="tag-item">后端开发</span>
+                <span class="tag-item">jvm原理</span>
+            </div>
+            <div class="info-desc">交通补助，员工旅游，加班补助，带薪年假，免费班车，定期体检，节日福利，五险一金，股票期权，年终奖，餐补，补充医疗保险</div>
+        </div>
+    </div>
+</li>
 
 </body>
 </html>

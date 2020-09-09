@@ -1,20 +1,8 @@
 package main
 
 import (
-	"regexp"
 	"time"
 )
-
-type JobSpider struct {
-}
-
-const (
-	JobSourceCjol  = "cjol"
-	JobSource51job = "51job"
-	JobSourceLagou = "lagou"
-)
-
-var digitsRegexp = regexp.MustCompile(`(\d+)`)
 
 // moders
 

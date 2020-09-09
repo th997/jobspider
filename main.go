@@ -16,6 +16,7 @@ import (
 var cjol CjolJobSpider
 var qcwyJobSpider QcwyJobSpider
 var lagouJobSpider LagouJobSpider
+var bossJobSpider BossJobSpider
 
 func getDb() (db *gorm.DB) {
 	db, err := gorm.Open("sqlite3", "./job.db")
@@ -54,6 +55,7 @@ func main() {
 	m.Get("/downloadCjol", downloadCjol)
 	m.Get("/downloadQcwy", downloadQcwy)
 	m.Get("/downloadLagou", downloadLagou)
+	m.Get("/downloadBoss", downloadBoss)
 
 	go func() {
 		//cmd := exec.Command("cmd", "/c start http://127.0.0.1:13520")
@@ -80,6 +82,13 @@ func downloadLagou() string {
 	go func() {
 		lagouUrl := `https://www.lagou.com/jobs/positionAjax.json?city=深圳&needAddtionalResult=false`
 		lagouJobSpider.FetchJSON(lagouUrl, 1)
+	}()
+	return "ok"
+}
+func downloadBoss() string {
+	go func() {
+		bossUrl := `https://www.zhipin.com/c101280600-p100101/?page=%d`
+		bossJobSpider.Fetch(bossUrl, 1)
 	}()
 	return "ok"
 }

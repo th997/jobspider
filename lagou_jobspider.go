@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"net/http/cookiejar"
 	"net/http/httputil"
 	"net/url"
 	"regexp"
@@ -19,16 +18,6 @@ import (
 
 type LagouJobSpider struct {
 	JobSpider
-}
-
-var client = &http.Client{}
-
-func init() {
-	jar, err := cookiejar.New(nil)
-	if err != nil {
-		panic(err)
-	}
-	client.Jar = jar
 }
 
 func getHttpRequest(url string) *http.Request {
